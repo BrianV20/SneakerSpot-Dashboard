@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+nav {
+  border: 2px solid green;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: gray;
+  /* > ul {
+      border: 2px solid blue;
+      display: flex;
+      > li {
+          border: 2px solid red;
+          list-style-type: none;
+          margin: 0 10px;
+          > a {
+              text-decoration: none;
+              color: white;
+              transition: all 0.3s ease-in-out;
+              &:hover {
+                  color: blue;
+              }
+          }
+      }
+  } */
+}
+
+.logoDiv {
+  border: 2px solid yellow;
+  > img {
+    height: 100px;
+  }
+}
+
+.containerDataPanelDiv {
+  margin: 1rem;
+  border: 2px solid pink;
+  display: flex;
+}
+
+.divDataPanel {
+  border: 2px solid yellow;
+  padding: 1rem;
+}
+
+.contentContainer {
+  border: 2px solid blue;
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+}
+
+.lastEntityDiv {
+  border: 2px solid pink;
+  padding: 1rem;
+  width: 60%;
+}
+
+.containerCategoriesDiv {
+  border: 2px solid purple;
+  padding: 1rem;
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.categoryDiv {
+  border: 1px solid burlywood;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}

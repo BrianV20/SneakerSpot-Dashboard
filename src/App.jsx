@@ -1,15 +1,19 @@
 import { useState } from "react";
 import { NavBar } from "./components/NavBar";
-import { LastEntity } from "./components/LastEntity";
+import { LastEntityContainer } from "./components/LastEntityContainer";
 import { ContainerCategories } from './components/ContainerCategories'
 import "./App.css";
 
 function App() {
+
   return (
     <>
       <NavBar />
+      {/* {products?.map((prod) => {
+        return <p>{prod.name}</p>
+      })} */}
       <div className="contentContainer">
-        <LastEntity />
+        <LastEntityContainer />
         <ContainerCategories />
       </div>
     </>

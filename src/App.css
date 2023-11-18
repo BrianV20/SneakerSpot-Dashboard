@@ -57,9 +57,12 @@ nav {
 }
 
 .lastEntityDiv {
-  border: 2px solid pink;
-  padding: 1rem;
+  /* border: 20px solid pink; */
+  /* padding: 1rem; */
   width: 60%;
+  > section {
+    border: 8px solid olivedrab;
+  }
 }
 
 .containerCategoriesDiv {
@@ -74,4 +77,45 @@ nav {
   border: 1px solid burlywood;
   padding: 0.5rem;
   margin: 0.5rem;
+}
+
+
+/* LAST ENTITY */
+#lastProductDetails, #lastUserDetails, #lastCategoryDetails {
+  border: 2px solid purple;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  display: grid;
+  /* grid-template-columns: repeat(2, auto); */
+  /* grid-template-rows: repeat(3, auto); */
+
+  > p {
+    /* border: 2px solid red; */
+    padding: 0.5rem;
+  }
+
+  > p:nth-child(1) {
+    grid-column: 1 / 3;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: 5px double blue;
+    margin-bottom: 1rem;
+  }
+
+  > p:nth-child(2n) {
+    color: rgb(114, 113, 113);
+  }
+}
+
+#lastUserDetails {
+  > p:nth-child(1) {
+    border-bottom: 5px double purple;
+  }
+}
+
+#lastCategoryDetails {
+
+  > p:nth-child(1) {
+    border-bottom: 5px double green;
+  }
 }

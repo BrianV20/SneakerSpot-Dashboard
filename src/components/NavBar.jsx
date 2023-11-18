@@ -11,7 +11,7 @@ export function NavBar() {
             <div className="logoDiv">
                 <img src="/logo.png" alt="logo" />
             </div>
-            <ContainerDataPanel n1="40" n2="4" n3="20" e1="products" e2="users" e3="categories" />
+            <ContainerDataPanel />
         </nav>
         </>
     )

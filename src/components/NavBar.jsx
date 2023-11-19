@@ -1,5 +1,4 @@
 import React from "react";
-import "../../public/css/NavBar.css";
 
 import { ContainerDataPanel } from "./ContainerDataPanel";
 

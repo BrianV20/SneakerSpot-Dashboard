@@ -5,6 +5,10 @@
   font-family: Poppins;
 }
 
+body {
+  background-color: #edf2f4;
+}
+
 nav {
   /* border: 2px solid green; */
   width: 100%;
@@ -57,16 +61,22 @@ nav {
 }
 
 .lastEntityDiv {
-  border: 5px solid pink;
+  /* border: 5px solid pink; */
+  background-color: #d6dce6;
+  /* box-shadow: 0 0 5px 2px black; */
+  padding: 1rem;
+  margin-right: 2rem;
   /* padding: 1rem; */
   width: 70%;
   > section {
-    border: 8px solid olivedrab;
+    /* border: 8px solid olivedrab; */
   }
 }
 
 .containerCategoriesDiv {
-  border: 5px solid purple;
+  /* border: 5px solid purple; */
+  background-color: #8d99ae;
+  box-shadow: 0 0 5px 2px black;
   padding: 1rem;
   width: 30%;
   display: grid;
@@ -77,13 +87,13 @@ nav {
 #categoriesTitle {
   /* color: #5a56e9; */
   /* border: 4px solid black; */
-  background-color: #3ec898;
+  /* background-color: #3ec898; */
   border-radius: 5px;
   text-align: center;
   grid-column: 1 / 3;
   text-transform: uppercase;
   height: fit-content;
-  box-shadow: 0 0 5px 2px black;
+  /* box-shadow: 0 0 5px 2px black; */
   transition: all 0.2s ease-in-out;
 }
 
@@ -99,7 +109,7 @@ nav {
   height: fit-content;
   border-radius: 5px;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   transition: all 0.1s ease-in-out;
   padding: 0.5rem;
   margin: 0.5rem;
@@ -115,7 +125,7 @@ nav {
 
 /* LAST ENTITY */
 #lastProductDetails, #lastUserDetails, #lastCategoryDetails {
-  /* border: 2px solid purple; */
+  border: 5px solid yellowgreen;
   margin: 0.5rem;
   padding: 0.5rem;
   display: grid;
@@ -145,7 +155,10 @@ nav {
 
   > img {
     width: 40%;
-    height: 10%;
+    /* height: 70%; */
+    border-radius: 10px;
+    margin: 1rem;
+    box-shadow: 0 0 7px 2px black;
   }
 }
 

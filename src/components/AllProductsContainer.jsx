@@ -17,7 +17,7 @@ export function AllProductsContainer() {
         <p>enOferta: </p>
         <p>{props.product.enOferta}</p>
         <p>Imagen: </p>
-        <p>{props.product.img}</p>
+        <img src={'http://localhost:3000/uploads/' + props.product.img} alt="imagen del producto" />
         <p>Clase: </p>
         <p>{props.product.class}</p>
         <p>Sex: </p>
@@ -40,8 +40,8 @@ export function AllProductsContainer() {
 
   return (
     <>
-      <div id="allProductsContainer">
         <h2>Productos de la base de datos</h2>
+      <div id="allProductsContainer">
         {products?.map((pro, index) => {
           return <ProductComponent key={index + pro} product={pro} />;
         })}

@@ -13,13 +13,16 @@ export function LastEntity({ entity }) {
       // let temp = Object.keys(entityData)[Object.keys(entityData).length - 1];
       // let temp2 = entityData[Object.keys(entityData)[Object.keys(entityData).length - 1]];
       let productToShow = entityData[entityData.length - 1];
-      
+
       return (
         <>
           {productToShow ? (
-            <div>
-              {/* <img src={productToShow.img} alt="" /> */}
-              <h4>Aca deberia ir la imagen del producto</h4>
+            <div className="entityContainer">
+              <img
+                src={"http://localhost:3000/uploads/" + productToShow.img}
+                alt="imagen del producto"
+              />
+              {/* <h4>Aca deberia ir la imagen del producto</h4> */}
               <section id="lastProductDetails">
                 <p>{productToShow.name}</p>
                 <p>Descripcion: </p>
@@ -52,9 +55,11 @@ export function LastEntity({ entity }) {
       return (
         <>
           {userToShow ? (
-            <div>
-              {/* {console.log(userToShow.detail)} */}
-              <h4>Aca deberia ir la imagen del usuario</h4>
+            <div className="entityContainer">
+              <img
+                src={"http://localhost:3000/uploads/" + userToShow.img}
+                alt="imagen del usuario"
+                />
               <section id="lastUserDetails">
                 <p>{userToShow.name}</p>
                 <p>Id: </p>
@@ -76,7 +81,7 @@ export function LastEntity({ entity }) {
       return (
         <>
           {categoryToShow ? (
-            <div>
+            <div className="entityContainer">
               <section id="lastCategoryDetails">
                 <p>{categoryToShow.name}</p>
                 <p>Id: </p>

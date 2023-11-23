@@ -22,7 +22,6 @@ export function LastEntity({ entity }) {
                 src={"http://localhost:3000/uploads/" + productToShow.img}
                 alt="imagen del producto"
               />
-              {/* <h4>Aca deberia ir la imagen del producto</h4> */}
               <section id="lastProductDetails">
                 <p>{productToShow.name}</p>
                 <p>Descripcion </p>

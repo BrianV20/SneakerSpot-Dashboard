@@ -21,14 +21,6 @@ export function AllProductsContainer() {
           src={"http://localhost:3000/uploads/" + props.product.img}
           alt="imagen del producto"
         />
-        {/* <p>Sex: </p>
-        <p>{props.product.sex}</p>
-        <p>Talles: </p>
-        <p>
-          {props.product.sizes?.map((talle) => {
-            return <span key={talle}>{talle} - </span>;
-          })}
-        </p> */}
       </div>
     );
   }

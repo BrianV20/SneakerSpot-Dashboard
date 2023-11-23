@@ -9,7 +9,7 @@ export function LastEntity({ entity }) {
   });
 
   function GetEntity({ entity, entityData }) {
-    if (entity == "Product") {
+    if (entity == "Producto") {
       // let temp = Object.keys(entityData)[Object.keys(entityData).length - 1];
       // let temp2 = entityData[Object.keys(entityData)[Object.keys(entityData).length - 1]];
       let productToShow = entityData[entityData.length - 1];
@@ -25,23 +25,32 @@ export function LastEntity({ entity }) {
               {/* <h4>Aca deberia ir la imagen del producto</h4> */}
               <section id="lastProductDetails">
                 <p>{productToShow.name}</p>
-                <p>Descripcion: </p>
+                <p>Descripcion </p>
                 <p>{productToShow.description}</p>
-                <p>Precio: </p>
-                <p>{productToShow.price}</p>
-                <p>Descuento: </p>
-                <p>{productToShow.discount}</p>
-                <p>Clase: </p>
+                <p>Precio </p>
+                <p>{'$' + productToShow.price}</p>
+                <p>Descuento </p>
+                <p>{productToShow.discount + '%'}</p>
+                <p>Clase </p>
                 <p>{productToShow.class}</p>
-                <p>Sexo: </p>
+                <p>Sexo </p>
                 <p>
-                  {/* {console.log("SEXO: " + productToShow.sex)} */}
                   {productToShow.sex
                     ? productToShow.sex == 0
                       ? "Mujer"
                       : "Hombre"
                     : ""}
                 </p>
+                <p>En oferta </p>
+                <p>
+                  {productToShow.enOferta
+                    ? productToShow.enOferta == 0
+                      ? "Si"
+                      : "No"
+                    : ""}
+                </p>
+                <p>Talles </p>
+                <p>{productToShow.sizes}</p>
               </section>
             </div>
           ) : (
@@ -49,7 +58,7 @@ export function LastEntity({ entity }) {
           )}
         </>
       );
-    } else if (entity == "User") {
+    } else if (entity == "Usuario") {
       let userToShow = entityData[entityData.length - 1];
 
       return (
@@ -62,11 +71,11 @@ export function LastEntity({ entity }) {
                 />
               <section id="lastUserDetails">
                 <p>{userToShow.name}</p>
-                <p>Id: </p>
+                <p>Id </p>
                 <p>{userToShow.id}</p>
-                <p>Email: </p>
+                <p>Email </p>
                 <p>{userToShow.email}</p>
-                <p>Tipo: </p>
+                <p>Tipo </p>
                 <p>{userToShow.type}</p>
               </section>
             </div>
@@ -75,7 +84,7 @@ export function LastEntity({ entity }) {
           )}
         </>
       );
-    } else if (entity == "Category") {
+    } else if (entity == "Categoria") {
       let categoryToShow = entityData[entityData.length - 1];
 
       return (
@@ -84,7 +93,7 @@ export function LastEntity({ entity }) {
             <div className="entityContainer">
               <section id="lastCategoryDetails">
                 <p>{categoryToShow.name}</p>
-                <p>Id: </p>
+                <p>Id </p>
                 <p>{categoryToShow.id}</p>
               </section>
             </div>
@@ -98,11 +107,11 @@ export function LastEntity({ entity }) {
 
   useEffect(() => {
     let url;
-    if (entity === "Product") {
+    if (entity === "Producto") {
       url = "http://localhost:3000/api/products";
-    } else if (entity === "User") {
+    } else if (entity === "Usuario") {
       url = "http://localhost:3000/api/users";
-    } else if (entity === "Category") {
+    } else if (entity === "Categoria") {
       url = "http://localhost:3000/api/categories";
     }
 

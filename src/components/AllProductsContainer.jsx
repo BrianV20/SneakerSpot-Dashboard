@@ -6,26 +6,29 @@ export function AllProductsContainer() {
   function ProductComponent(props) {
     return (
       <div className="productContainer">
-        <p>ID: </p>
+        <p>ID </p>
         <p>{props.product.id}</p>
-        <p>Nombre: </p>
+        <p>Nombre </p>
         <p>{props.product.name}</p>
-        <p>Descripción: </p>
+        <p>Descripción </p>
         <p>{props.product.description}</p>
-        <p>Descuento: </p>
-        <p>{props.product.discount}</p>
-        <p>enOferta: </p>
-        <p>{props.product.enOferta}</p>
-        <p>Imagen: </p>
-        <img src={'http://localhost:3000/uploads/' + props.product.img} alt="imagen del producto" />
-        <p>Clase: </p>
+        <p>Precio </p>
+        <p>{'$' + props.product.price}</p>
+        <p>Clase </p>
         <p>{props.product.class}</p>
-        <p>Sex: </p>
+        <p>Imagen </p>
+        <img
+          src={"http://localhost:3000/uploads/" + props.product.img}
+          alt="imagen del producto"
+        />
+        {/* <p>Sex: </p>
         <p>{props.product.sex}</p>
         <p>Talles: </p>
-        <p>{props.product.sizes?.map((talle) => {
-            return <span key={talle}>{talle} - </span>
-        })}</p>
+        <p>
+          {props.product.sizes?.map((talle) => {
+            return <span key={talle}>{talle} - </span>;
+          })}
+        </p> */}
       </div>
     );
   }
@@ -40,7 +43,7 @@ export function AllProductsContainer() {
 
   return (
     <>
-        <h2>Productos de la base de datos</h2>
+      <h2 id="allProductsTitle">Productos de la base de datos</h2>
       <div id="allProductsContainer">
         {products?.map((pro, index) => {
           return <ProductComponent key={index + pro} product={pro} />;

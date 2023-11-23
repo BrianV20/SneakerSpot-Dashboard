@@ -15,7 +15,7 @@ export function ContainerCategories() {
   return (
     <>
       <div className="containerCategoriesDiv">
-        <h2 id="categoriesTitle">Categories</h2>
+        <h2 id="categoriesTitle">Categorías</h2>
         {categories?.map((cat, index) => {
           return <Category key={index + cat} name={cat.name} count={cat.count} />;
         })}

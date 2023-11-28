@@ -33,12 +33,12 @@ export function LastEntity({ entity }) {
                 <p>Clase </p>
                 <p>{productToShow.class}</p>
                 <p>Sexo </p>
+                {console.log(productToShow)}
                 <p>
                   {productToShow.sex
-                    ? productToShow.sex == 0
                       ? "Mujer"
                       : "Hombre"
-                    : ""}
+                    }
                 </p>
                 <p>En oferta </p>
                 <p>
@@ -49,7 +49,15 @@ export function LastEntity({ entity }) {
                     : ""}
                 </p>
                 <p>Talles </p>
-                <p>{productToShow.sizes}</p>
+                <p>{productToShow.sizes?.map((size) => {
+                  if (size == productToShow.sizes[productToShow.sizes.length - 1]) {
+                    return size;
+                  }
+                  else {
+                    return size + ' - ';
+                  }
+                })}</p>
+                {/* <p>{productToShow.sizes}</p> */}
               </section>
             </div>
           ) : (
